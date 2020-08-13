@@ -15,8 +15,20 @@ services:
       - "8080:8080"
     stdin_open: true
     tty: true
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "3306:3306"
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - mysql-data:/var/lib/mysql
+
 volumes:
   bundle:
   yarn-cache:
   public-data:
   tmp-data:
+  mysql-data:
+    driver: local
