@@ -18,6 +18,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "rm_public": "rm -rf ../backend/public/*",
+    "cp_build": "cp -rf build/* ../backend/public/",
+    "brc": "yarn build && yarn rm_public && yarn cp_build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
