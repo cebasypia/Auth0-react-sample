@@ -17,8 +17,8 @@ services:
     volumes:
       - .:/auth0-sample
       - bundle:/usr/local/bundle
-      - public-data:/auth0-sample/public
-      - tmp-data:/auth0-sample/tmp
+      - public-data:/auth0-sample/backend/public
+      - tmp-data:/auth0-sample/backend/tmp
       - yarn-cache:/usr/local/share/.cache/yarn/v6
     ports:
       - "3000:3000"

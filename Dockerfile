@@ -15,4 +15,4 @@ COPY . /auth0-sample
 EXPOSE 3000
 
 # puma.sockを配置するディレクトリを作成
-# RUN mkdir -p tmp/sockets
+RUN mkdir -p backend/tmp/sockets
