@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
+import LoginButton from './pages/LoginButton'
+import LogoutButton from './pages/LogoutButton'
 import * as serviceWorker from './serviceWorker';
+import { Auth0Provider } from "@auth0/auth0-react";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Auth0Provider
+      domain="auth0-sample-cebasypia.us.auth0.com"
+      clientId="DohnJf5OEbkzhMEuHLkzVYzkZOaRpFQq"
+      redirectUri={window.location.origin}
+    >
+      <LoginButton />
+      <LogoutButton />
+    </Auth0Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
