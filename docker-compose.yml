@@ -12,7 +12,7 @@ services:
       - yarn-cache:/usr/local/share/.cache/yarn/v6
     ports:
       - "3000:3000"
-      - "3333:3333"
+      - "8080:8080"
     stdin_open: true
     tty: true
 volumes:
